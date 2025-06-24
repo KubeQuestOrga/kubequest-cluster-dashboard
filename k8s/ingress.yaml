@@ -19,6 +19,6 @@ spec:
             path: '/'
             backend:
               service:
-                name: kubernetes-dashboard
+                name: kubernetes-dashboard-kong-proxy
                 port:
                   number: 443
