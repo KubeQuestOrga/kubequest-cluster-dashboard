@@ -10,7 +10,7 @@
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
 sudo helm repo add k8s-dashboard https://kubernetes.github.io/dashboard
 sudo helm repo update
-sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm install kubernetes-dashboard k8s-dashboard/kubernetes-dashboard --version 7.13.0 --namespace kubernetes-dashboard --create-namespace
+sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm install kubernetes-dashboard k8s-dashboard/kubernetes-dashboard --version 7.13.0 --namespace kubernetes-dashboard --create-namespace --set app.ingress.enabled=false --set nginx.enabled=false --set cert-manager.enabled=false
 ```
 
 <br /><br /><br /><br />
@@ -22,5 +22,5 @@ sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm install kubernetes-dashboard k8s-
 3. Run command :
 ```bash
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
-sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm upgrade kubernetes-dashboard k8s-dashboard/kubernetes-dashboard --namespace kubernetes-dashboard  --values values.yaml
+sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm upgrade kubernetes-dashboard k8s-dashboard/kubernetes-dashboard --namespace kubernetes-dashboard
 ```
