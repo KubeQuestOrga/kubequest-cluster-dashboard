@@ -1,5 +1,21 @@
 # KubeQuest - Dashboard - Cluster K3s
 
+## Pourquoi un Dashboard Kubernetes ❓
+
+Kubernetes est un puissant orchestrateur, mais il est souvent manipulé en ligne de commande via `kubectl`.  
+➡️ Cela peut être peu intuitif pour suivre l’état de ses ressources en temps réel ou intervenir rapidement sur des objets (pods, services, etc.).
+
+C’est là que le **Kubernetes Dashboard** intervient.
+
+Il s’agit d’une **interface graphique web** officielle qui permet de :
+- Visualiser tous les objets Kubernetes (pods, deployments, services, configmaps, etc.).
+- Accéder rapidement aux logs des pods, à leur statut, et aux métriques basiques.
+- Créer, modifier ou supprimer des objets directement via une interface web.
+- Gérer l'état du cluster sans ligne de commande.
+
+<br /><br /><br /><br />
+
+
 ## ⚙ Setup Environment
 1. Connect to the NODE MASTER in Cluster K3S.
 2. Install HELM : https://helm.sh/docs/intro/install/
